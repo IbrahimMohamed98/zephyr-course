@@ -7,7 +7,7 @@
 
 	leds {
 		compatible = "gpio-leds";
-		status_led: led_0 {
+		led0: status_led: led_0 {
 			gpios = <&gpio0 2 GPIO_ACTIVE_HIGH>;
 			label = "User LED";
 		};

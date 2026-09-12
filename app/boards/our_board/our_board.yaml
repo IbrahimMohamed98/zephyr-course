@@ -1,0 +1,20 @@
+identifier: our_board
+name: our esp32s3 board
+type: mcu
+arch: xtensa
+toolchain:
+  - zephyr
+supported:
+  - gpio
+  - uart
+  - i2c
+  - i2s
+  - spi
+  - can
+  - counter
+  - watchdog
+  - entropy
+  - pwm
+  - dma
+  - input
+vendor: espressif

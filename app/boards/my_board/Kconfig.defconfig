@@ -1,0 +1,30 @@
+# SPDX-License-Identifier: Apache-2.0
+
+if BOARD_MY_BOARD
+
+config BUILD_OUTPUT_BIN
+	default n
+
+config QEMU_TARGET
+	default y
+
+config HAS_COVERAGE_SUPPORT
+	default y
+
+config FLASH_SIMULATOR
+	default y
+	depends on FLASH
+
+config MULTIBOOT
+	default y
+
+config MULTIBOOT_INFO
+	default y if MULTIBOOT
+
+config MULTIBOOT_MEMMAP
+	default y if MULTIBOOT
+
+config QEMU_ICOUNT_SHIFT
+	default 5
+
+endif # BOARD_MY_BOARD

@@ -1,0 +1,10 @@
+identifier: my_board
+name: My Custom QEMU X86 Board
+type: qemu
+simulation:
+  - name: qemu
+arch: x86
+ram: 32
+toolchain:
+  - zephyr
+vendor: qemu

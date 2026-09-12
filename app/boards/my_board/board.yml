@@ -1,0 +1,6 @@
+board:
+  name: my_board
+  full_name: My Custom QEMU X86 Board
+  vendor: qemu
+  socs:
+    - name: atom

@@ -1,5 +1,6 @@
 #include <zephyr/kernel.h>
 #include <zephyr/drivers/sensor.h>
+#include <our_drivers/our_driver.h>
 
 const struct device *dev = DEVICE_DT_GET_ANY(our_driver);
 
@@ -9,11 +10,12 @@ int main(void)
 		return -ENODEV;
 	}
 
-	/* Turn LED ON */
+	/* Call standard sensor functions */
 	sensor_sample_fetch(dev);
-	k_msleep(1000);
 
-	/* Turn LED OFF */
+	/* Call custom extension function to modify dynamic data parameter */
+	our_driver_set_param(dev, 500);
+
 	sensor_channel_get(dev, SENSOR_CHAN_ALL, NULL);
 
 	return 0;

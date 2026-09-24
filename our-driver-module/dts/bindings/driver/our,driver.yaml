@@ -1,0 +1,7 @@
+description: On-board LED Sensor Driver Binding
+compatible: "our,driver"
+include: base.yaml
+properties:
+  led-gpios:
+    type: phandle-array
+    required: true

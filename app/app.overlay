@@ -1,5 +1,9 @@
+#include <zephyr/dt-bindings/gpio/gpio.h>
+
 / {
-	aliases {
-		app-led = &led0;
+	led_sensor: led_sensor {
+		compatible = "our,driver";
+		led-gpios = <&gpio0 13 GPIO_ACTIVE_HIGH>;
+		status = "okay";
 	};
 };

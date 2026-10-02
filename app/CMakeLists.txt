@@ -5,4 +5,4 @@ list(APPEND ZEPHYR_EXTRA_MODULES ${CMAKE_CURRENT_SOURCE_DIR}/../our-driver-modul
 find_package(Zephyr REQUIRED)
 project(my_zephyr_app)
 
-target_sources(app PRIVATE src/main.cpp)
+target_sources(app PRIVATE src/main.c)
